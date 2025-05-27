@@ -14,7 +14,8 @@ CREATE TABLE `movies_data` (
    `year` year DEFAULT NULL,
    `uri` varchar(255) DEFAULT NULL,
    `status` enum('not_watched','watched') DEFAULT 'not_watched',
-   PRIMARY KEY (`movie_id`)
+   PRIMARY KEY (`movie_id`),
+   UNIQUE KEY `unique_name_year` (`name`, `year`)
 );
 ```
 
