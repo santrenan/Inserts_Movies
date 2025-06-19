@@ -16,7 +16,7 @@ with open('insert_movies.sql', 'w', encoding='utf-8') as sqlfile:
         date = movie['Date']
         name = movie['Name'].replace("'", "''")
         year = movie['Year']
-        uri = movie['Letterboxd_URI']
+        uri = movie['Letterboxd URI']
 
         sql = f"INSERT INTO movies_data (date, name, year, uri) VALUES ('{date}', '{name}', {year}, '{uri}');\n"
         sqlfile.write(sql)
